@@ -5,11 +5,12 @@ import { useEffect, useState } from 'react';
 export default function Home() {
   const [message, setMessage] = useState('');
 
-  useEffect(() => {
-    fetch('http://localhost:8000/api/hello')
-      .then(res => res.json())
-      .then(data => setMessage(data.message));
-  }, []);
+useEffect(() => {
+  fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/hello`)
+    .then(res => res.json())
+    .then(data => setMessage(data.message));
+}, []);
+
 
   return (
     <main className="p-10">
