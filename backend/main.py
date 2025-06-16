@@ -7,7 +7,7 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],  # update as needed
+    allow_origins=["http://localhost:3000", "https://hack-the-bias.vercel.app"],  # update as needed
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
