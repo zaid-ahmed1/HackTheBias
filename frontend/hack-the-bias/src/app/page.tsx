@@ -17,8 +17,9 @@ useEffect(() => {
 
   return (
     <main className="p-10">
-      <h1 className="text-2xl font-bold">Hackathon Platform</h1>
+      <h1 className="text-3xl font-bold">Welcome to HackTheBias</h1>
       <p className="mt-4 text-gray-700">Backend Status: {message}</p>
+      <p className="mt-4 text-gray-600">Landing page content goes here.</p>
     </main>
   );
 }
