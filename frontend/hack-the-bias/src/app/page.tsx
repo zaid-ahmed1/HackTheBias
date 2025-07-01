@@ -1,13 +1,15 @@
 async function getBackendStatus() {
   try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}`, { cache: 'no-store' });
-    if (!res.ok) return "Failed to connect";
-    
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}`, {
+      cache: 'no-store',
+    });
+    if (!res.ok) return 'Failed to connect';
+
     const data = await res.json();
     return data.status;
   } catch (error) {
-    console.error("API Error:", error);
-    return "API is unavailable";
+    console.error('API Error:', error);
+    return 'API is unavailable';
   }
 }
 
