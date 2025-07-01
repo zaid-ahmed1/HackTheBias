@@ -1,19 +1,18 @@
-'use client';
+async function getBackendStatus() {
+  try {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}`, { cache: 'no-store' });
+    if (!res.ok) return "Failed to connect";
+    
+    const data = await res.json();
+    return data.status;
+  } catch (error) {
+    console.error("API Error:", error);
+    return "API is unavailable";
+  }
+}
 
-import { useEffect, useState } from 'react';
-
-export default function Home() {
-  const [message, setMessage] = useState('');
-
-useEffect(() => {
-  fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}`)
-    .then(res => res.json())
-    .then(data => {
-      console.log("API response:", data);
-      setMessage(data.status);
-    })
-    .catch(err => console.log("API error:", err));
-}, []);
+export default async function Home() {
+  const message = await getBackendStatus();
 
   return (
     <main className="p-10">
