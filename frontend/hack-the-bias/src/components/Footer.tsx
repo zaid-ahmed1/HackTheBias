@@ -4,7 +4,7 @@ import { Typography, Container, Box } from '@mui/material';
 import { useEffect, useState } from 'react';
 
 export default function Footer() {
-  const [year, setYear] = useState(new Date().getFullYear());
+  const [year, setYear] = useState(0);
 
   useEffect(() => {
     setYear(new Date().getFullYear());
@@ -14,9 +14,13 @@ export default function Footer() {
     <Box
       component="footer"
       sx={{
-        marginTop: 'auto',
-        paddingY: 3,
-        backgroundColor: 'warning.main',
+        background: 'linear-gradient(to right, #B7C4FC, #F7D8F6)',
+        color: '#222',
+        textAlign: 'center',
+        py: 2,
+        fontSize: '0.875rem',
+        borderTop: '1px solid rgba(0, 0, 0, 0.1)',
+        boxShadow: '0 -2px 6px rgba(0,0,0,0.1)',
       }}
     >
       <Container maxWidth="lg">
