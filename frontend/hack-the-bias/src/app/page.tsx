@@ -1,24 +1,38 @@
-'use client';
+import AboutSection from '@/components/pages/home/AboutSection';
+import Hero from '@/components/pages/home/Hero';
+import HowItWorksSection from '../components/pages/home/HowItWorks';
+import TimelineSection from '@/components/pages/home/Timeline';
+import SponsorsSection from '@/components/pages/home/Sponsors';
+import TestimonialsSection from '../components/pages/home/Testimonials';
+import FAQPreview from '@/components/pages/home/FAQPreview';
+import CallToAction from '@/components/pages/home/CallToAction';
 
-import { useEffect, useState } from 'react';
+// async function getBackendStatus() {
+//   try {
+//     const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}`, {
+//       cache: 'no-store',
+//     });
+//     if (!res.ok) return 'Failed to connect';
 
-export default function Home() {
-  const [message, setMessage] = useState('');
+//     const data = await res.json();
+//     return data.status;
+//   } catch (error) {
+//     console.error('API Error:', error);
+//     return 'API is unavailable';
+//   }
+// }
 
-useEffect(() => {
-  fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}`)
-    .then(res => res.json())
-    .then(data => {
-      console.log("API response:", data);
-      setMessage(data.status);
-    })
-    .catch(err => console.log("API error:", err));
-}, []);
-
+export default async function Home() {
   return (
-    <main className="p-10">
-      <h1 className="text-2xl font-bold">Hackathon Platform</h1>
-      <p className="mt-4 text-gray-700">Backend Status: {message}</p>
+    <main>
+      <TimelineSection />
+      <Hero />
+      <AboutSection />
+      <HowItWorksSection />
+      <SponsorsSection />
+      <TestimonialsSection />
+      <FAQPreview />
+      <CallToAction />
     </main>
   );
 }
