@@ -25,7 +25,7 @@ const faqItems = [
   {
     question: 'Is HackTheBias free?',
     answer:
-      'Yes, participating in HackTheBias is completely free. We’ll even provide meals, swag, and some travel reimbursements for selected applicants.',
+      'Yes, participating in HackTheBias is completely free. We’ll even provide meals, and some cool swag!',
   },
   {
     question: 'What’s the main theme of the hackathon?',

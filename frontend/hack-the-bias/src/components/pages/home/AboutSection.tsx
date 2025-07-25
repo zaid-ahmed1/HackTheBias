@@ -23,7 +23,7 @@ export default function AboutSection() {
           WebkitTextFillColor: 'transparent',
         }}
       >
-        About HackTheBias
+        About Hack The Bias
       </Typography>
 
       <Divider

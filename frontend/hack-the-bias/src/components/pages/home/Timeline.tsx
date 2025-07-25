@@ -1,7 +1,6 @@
 'use client';
 
 import { Box, CircularProgress, Typography } from '@mui/material';
-import { useState } from 'react';
 import dynamic from 'next/dynamic';
 
 // Dynamically load ThreeCountdown with no SSR to avoid hydration issues
@@ -20,7 +19,7 @@ const ThreeCountdown = dynamic(() => import('../../ThreeJs/ThreeCountdown'), {
 });
 
 export default function TimelineSection() {
-  const [participants] = useState(136);
+  // const [participants] = useState(136);
 
   return (
     <Box
@@ -49,10 +48,10 @@ export default function TimelineSection() {
       <Box sx={{ width: '100%', maxWidth: 900, justifyContent: 'center' }}>
         <ThreeCountdown />
       </Box>
-
-      <Typography variant="h6" color="text.secondary">
+      {/* We will bring this back once we setup the actual backend for it */}
+      {/* <Typography variant="h6" color="text.secondary">
         {participants.toLocaleString()} participants registered
-      </Typography>
+      </Typography> */}
     </Box>
   );
 }
