@@ -1,7 +1,15 @@
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  // Remove experimental.esmExternals since it can cause issues with Turbopack
+  turbopack: {
+    rules: {
+      '*.svg': {
+        loaders: ['@svgr/webpack'],
+        as: '*.js',
+      },
+    },
+  },
+
   webpack: (config, { isServer }) => {
     // Only apply webpack config on client side to avoid SSR issues
     if (!isServer) {
@@ -22,17 +30,7 @@ const nextConfig: NextConfig = {
     }
     return config;
   },
-  // Enable Turbopack for better performance
-  experimental: {
-    turbo: {
-      rules: {
-        '*.svg': {
-          loaders: ['@svgr/webpack'],
-          as: '*.js',
-        },
-      },
-    },
-  },
+
   // Optimize for Three.js
   transpilePackages: ['three', '@react-three/fiber', '@react-three/drei'],
 };
