@@ -29,7 +29,7 @@ export default function Hero() {
           WebkitTextFillColor: 'transparent',
         }}
       >
-        Empowering Change Through Code
+        Empowering Change Through Innovation
       </Typography>
 
       <Typography
@@ -40,7 +40,7 @@ export default function Hero() {
           fontWeight: 400,
         }}
       >
-        HackTheBias is a youth-led hackathon that challenges developers,
+        Hack The Bias is a youth-led hackathon that challenges developers,
         designers, and dreamers to build tech for social justice, inclusion, and
         equity.
       </Typography>

@@ -52,7 +52,7 @@ export default function HowItWorksSection() {
       </Typography>
 
       <Typography variant="body1" sx={{ mb: 6, color: 'rgba(0,0,0,0.65)' }}>
-        From idea to impact — here’s what your HackTheBias journey looks like:
+        From idea to impact — here’s what your Hack The Bias journey looks like:
       </Typography>
 
       <Grid container spacing={4} justifyContent="center">
