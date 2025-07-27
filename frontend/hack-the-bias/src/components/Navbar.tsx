@@ -23,7 +23,7 @@ export default function Navbar() {
           sx={{ textDecoration: 'none' }}
         >
           <Image
-            src="/chip.png"
+            src="/pixel.svg"
             alt="HackTheBias Logo"
             width={60}
             height={60}

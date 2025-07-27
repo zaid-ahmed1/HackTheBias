@@ -1,7 +1,12 @@
+from dotenv import load_dotenv
+load_dotenv()
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from routers import root
+from routers import root, preregister
 import os
+from utils.supabase_client import supabase
+
 
 app = FastAPI()
 
@@ -14,7 +19,7 @@ app.add_middleware(
 )
 
 app.include_router(root.router, prefix="/api")
-
+app.include_router(preregister.router, prefix="/api")
 
 if __name__ == "__main__":
     import uvicorn
