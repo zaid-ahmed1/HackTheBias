@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 'use client';
 
 import {
@@ -115,7 +116,6 @@ export default function CallToAction() {
           <Box mt={2} display="flex" justifyContent="center">
             <ReCAPTCHA
               sitekey={RECAPTCHA_SITE_KEY}
-              // eslint-disable-next-line @typescript-eslint/no-explicit-any
               onChange={(token: any) => setCaptchaToken(token || '')}
             />
           </Box>
