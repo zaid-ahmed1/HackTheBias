@@ -157,7 +157,10 @@ export default function CallToAction() {
         autoHideDuration={5000}
         onClose={() => setSubmitted(false)}
       >
-        <Alert severity="success">Thanks! You’re now on the list.</Alert>
+        <Alert severity="success">
+          Thanks! You’re now on the list. A welcome E-amil will be sent to your
+          inbox shortly
+        </Alert>
       </Snackbar>
     </Box>
   );
