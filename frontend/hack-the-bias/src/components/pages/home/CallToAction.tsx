@@ -30,11 +30,15 @@ export default function CallToAction() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  const [loading, setLoading] = useState(false);
+
   const handleSubmit = async () => {
     if (!formData.name || !formData.email || !captchaToken) {
       setError('Please fill all fields and verify you are human.');
       return;
     }
+
+    setLoading(true); // disable button
 
     try {
       const res = await fetch(
@@ -57,6 +61,8 @@ export default function CallToAction() {
       }
     } catch {
       setError('Something went wrong.');
+    } finally {
+      setLoading(false); // re-enable button
     }
   };
 
@@ -94,7 +100,14 @@ export default function CallToAction() {
       </Paper>
 
       {/* Dialog Form */}
-      <Dialog open={open} onClose={() => setOpen(false)}>
+      <Dialog
+        open={open}
+        onClose={() => {
+          if (loading) return;
+
+          setOpen(false);
+        }}
+      >
         <DialogTitle>Pre-register for HackTheBias 2026</DialogTitle>
         <DialogContent>
           <TextField
@@ -121,9 +134,11 @@ export default function CallToAction() {
           </Box>
         </DialogContent>
         <DialogActions>
-          <Button onClick={() => setOpen(false)}>Cancel</Button>
-          <Button onClick={handleSubmit} variant="contained">
-            Submit
+          <Button onClick={() => setOpen(false)} disabled={loading}>
+            Cancel
+          </Button>
+          <Button onClick={handleSubmit} variant="contained" disabled={loading}>
+            {loading ? 'Submitting...' : 'Submit'}
           </Button>
         </DialogActions>
       </Dialog>
