@@ -14,19 +14,25 @@ function getTimeRemaining(targetDate: Date) {
   return { total, days, hours, minutes, seconds };
 }
 
-function RollingDigit({ value }: { value: string }) {
+function RollingDigit({
+  value,
+  isMobile,
+}: {
+  value: string;
+  isMobile: boolean;
+}) {
   return (
     <div
       style={{
         display: 'inline-block',
-        width: '60px',
-        height: '80px',
+        width: isMobile ? '45px' : '60px',
+        height: isMobile ? '60px' : '80px',
         backgroundColor: '#1a1a1a',
         border: '2px solid #333',
         borderRadius: '8px',
         overflow: 'hidden',
         position: 'relative',
-        margin: '0 2px',
+        margin: isMobile ? '0 1px' : '0 2px',
       }}
     >
       <div
@@ -35,7 +41,7 @@ function RollingDigit({ value }: { value: string }) {
           top: 0,
           left: 0,
           width: '100%',
-          transform: `translateY(-${parseInt(value) * 80}px)`,
+          transform: `translateY(-${parseInt(value) * (isMobile ? 60 : 80)}px)`,
           transition: 'transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
         }}
       >
@@ -43,11 +49,11 @@ function RollingDigit({ value }: { value: string }) {
           <div
             key={num}
             style={{
-              height: '80px',
+              height: isMobile ? '60px' : '80px',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              fontSize: '2.5rem',
+              fontSize: isMobile ? '1.8rem' : '2.5rem',
               fontWeight: 'bold',
               color: '#8B5A8C',
               fontFamily: 'monospace',
@@ -62,15 +68,15 @@ function RollingDigit({ value }: { value: string }) {
   );
 }
 
-function Separator() {
+function Separator({ isMobile }: { isMobile: boolean }) {
   return (
     <div
       style={{
         display: 'inline-block',
-        fontSize: '2.5rem',
+        fontSize: isMobile ? '1.8rem' : '2.5rem',
         fontWeight: 'bold',
         color: '#8B5A8C',
-        margin: '0 8px',
+        margin: isMobile ? '0 4px' : '0 8px',
         textShadow: '0 0 8px rgba(139, 90, 140, 0.5)',
       }}
     >
@@ -81,12 +87,24 @@ function Separator() {
 
 export default function ThreeCountdown() {
   const [time, setTime] = useState(getTimeRemaining(TARGET_DATE));
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+
     const interval = setInterval(() => {
       setTime(getTimeRemaining(TARGET_DATE));
     }, 1000);
-    return () => clearInterval(interval);
+
+    return () => {
+      clearInterval(interval);
+      window.removeEventListener('resize', checkMobile);
+    };
   }, []);
 
   const days = `${time.days}`.padStart(3, '0');
@@ -100,37 +118,44 @@ export default function ThreeCountdown() {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        padding: '20px',
+        padding: isMobile ? '16px 12px' : '20px',
         backgroundColor: 'rgba(0, 0, 0, 0.1)',
         borderRadius: '12px',
         boxShadow: '0 4px 20px rgba(0, 0, 0, 0.2)',
+        flexWrap: isMobile ? 'wrap' : 'nowrap',
+        gap: isMobile ? '8px 0' : '0',
       }}
     >
       {/* Days */}
-      {days.split('').map((digit, i) => (
-        <RollingDigit key={`day-${i}`} value={digit} />
-      ))}
-
-      <Separator />
+      <div style={{ display: 'flex', alignItems: 'center' }}>
+        {days.split('').map((digit, i) => (
+          <RollingDigit key={`day-${i}`} value={digit} isMobile={isMobile} />
+        ))}
+        <Separator isMobile={isMobile} />
+      </div>
 
       {/* Hours */}
-      {hours.split('').map((digit, i) => (
-        <RollingDigit key={`hour-${i}`} value={digit} />
-      ))}
-
-      <Separator />
+      <div style={{ display: 'flex', alignItems: 'center' }}>
+        {hours.split('').map((digit, i) => (
+          <RollingDigit key={`hour-${i}`} value={digit} isMobile={isMobile} />
+        ))}
+        <Separator isMobile={isMobile} />
+      </div>
 
       {/* Minutes */}
-      {minutes.split('').map((digit, i) => (
-        <RollingDigit key={`min-${i}`} value={digit} />
-      ))}
-
-      <Separator />
+      <div style={{ display: 'flex', alignItems: 'center' }}>
+        {minutes.split('').map((digit, i) => (
+          <RollingDigit key={`min-${i}`} value={digit} isMobile={isMobile} />
+        ))}
+        <Separator isMobile={isMobile} />
+      </div>
 
       {/* Seconds */}
-      {seconds.split('').map((digit, i) => (
-        <RollingDigit key={`sec-${i}`} value={digit} />
-      ))}
+      <div style={{ display: 'flex', alignItems: 'center' }}>
+        {seconds.split('').map((digit, i) => (
+          <RollingDigit key={`sec-${i}`} value={digit} isMobile={isMobile} />
+        ))}
+      </div>
     </div>
   );
 }

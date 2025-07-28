@@ -2,10 +2,10 @@ import AboutSection from '@/components/pages/home/AboutSection';
 import Hero from '@/components/pages/home/Hero';
 import HowItWorksSection from '../components/pages/home/HowItWorks';
 import TimelineSection from '@/components/pages/home/Timeline';
-import SponsorsSection from '@/components/pages/home/Sponsors';
 import TestimonialsSection from '../components/pages/home/Testimonials';
 import FAQPreview from '@/components/pages/home/FAQPreview';
 import CallToAction from '@/components/pages/home/CallToAction';
+import JoinCommunity from '@/components/pages/home/JoinCommunity';
 
 // async function getBackendStatus() {
 //   try {
@@ -29,10 +29,12 @@ export default async function Home() {
       <Hero />
       <AboutSection />
       <HowItWorksSection />
-      <SponsorsSection />
+      {/* Bring back when we get sponsors */}
+      {/* <SponsorsSection /> */}
       <TestimonialsSection />
       <FAQPreview />
       <CallToAction />
+      <JoinCommunity />
     </main>
   );
 }
