@@ -23,7 +23,7 @@ export default function Navbar() {
           sx={{ textDecoration: 'none' }}
         >
           <Image
-            src="/chip.png"
+            src="/pixel.svg"
             alt="HackTheBias Logo"
             width={60}
             height={60}
@@ -36,6 +36,7 @@ export default function Navbar() {
         <Box display="flex" gap={2}>
           <NavButton href="/">Home</NavButton>
           <NavButton href="/about">About</NavButton>
+          <NavButton href="/sponsors">For Sponsors</NavButton>
           <NavButton href="/faq">FAQ</NavButton>
         </Box>
       </Toolbar>
