@@ -1,52 +1,52 @@
-import { Star } from '@mui/icons-material';
-import { Typography, Card, Chip, CardContent } from '@mui/material';
-import { Box, Grid } from '@mui/system';
+import { Typography } from '@mui/material';
+import { Box } from '@mui/system';
 
 // Sample sponsor data with actual tiers from the package
-const sponsors = [
-  {
-    id: 1,
-    name: 'KPMG',
-    logo: '/sponsors/kpmg.png',
-    tier: 'Visionary',
-    description: 'Leading professional services and advisory firm',
-    industry: 'Professional Services',
-    website: 'https://kpmg.com',
-  },
-  {
-    id: 2,
-    name: 'Cenovus Energy',
-    logo: '/sponsors/cenovus.png',
-    tier: 'Trailblazer',
-    description: 'Innovative energy company driving sustainable solutions',
-    industry: 'Energy',
-    website: 'https://cenovus.com',
-  },
-  {
-    id: 3,
-    name: 'City of Calgary',
-    logo: '/sponsors/calgary.png',
-    tier: 'Maverick',
-    description: 'Supporting innovation and technology in Calgary',
-    industry: 'Government',
-    website: 'https://calgary.ca',
-  },
-];
+// const sponsors = [
+//   {
+//     id: 1,
+//     name: 'KPMG',
+//     logo: '/sponsors/kpmg.png',
+//     tier: 'Visionary',
+//     description: 'Leading professional services and advisory firm',
+//     industry: 'Professional Services',
+//     website: 'https://kpmg.com',
+//   },
+//   {
+//     id: 2,
+//     name: 'Cenovus Energy',
+//     logo: '/sponsors/cenovus.png',
+//     tier: 'Trailblazer',
+//     description: 'Innovative energy company driving sustainable solutions',
+//     industry: 'Energy',
+//     website: 'https://cenovus.com',
+//   },
+//   {
+//     id: 3,
+//     name: 'City of Calgary',
+//     logo: '/sponsors/calgary.png',
+//     tier: 'Maverick',
+//     description: 'Supporting innovation and technology in Calgary',
+//     industry: 'Government',
+//     website: 'https://calgary.ca',
+//   },
+// ];
 
-const getTierColor = (tier: string) => {
-  switch (tier) {
-    case 'Visionary':
-      return '#FFD700';
-    case 'Trailblazer':
-      return '#F7931E';
-    case 'Maverick':
-      return '#FF6B35';
-    case 'Advocate':
-      return '#8B5A8C';
-    default:
-      return '#8B5A8C';
-  }
-};
+// Bring back as we get sponsors
+// const getTierColor = (tier: string) => {
+//   switch (tier) {
+//     case 'Visionary':
+//       return '#FFD700';
+//     case 'Trailblazer':
+//       return '#F7931E';
+//     case 'Maverick':
+//       return '#FF6B35';
+//     case 'Advocate':
+//       return '#8B5A8C';
+//     default:
+//       return '#8B5A8C';
+//   }
+// };
 
 export default function CurrentSponsors() {
   return (
@@ -65,7 +65,7 @@ export default function CurrentSponsors() {
         </Typography>
       </Box>
 
-      <Grid container spacing={4}>
+      {/* <Grid container spacing={4}>
         {sponsors.map((sponsor) => (
           <Grid size={{ xs: 12, sm: 6, lg: 4 }} key={sponsor.id}>
             <Card
@@ -125,7 +125,7 @@ export default function CurrentSponsors() {
             </Card>
           </Grid>
         ))}
-      </Grid>
+      </Grid> */}
     </Box>
   );
 }
