@@ -1,6 +1,7 @@
 'use client';
 
-import { Box, CircularProgress, Typography } from '@mui/material';
+import GradientText from '@/components/ui/GradientText';
+import { Box, CircularProgress } from '@mui/material';
 import dynamic from 'next/dynamic';
 
 // Dynamically load ThreeCountdown with no SSR to avoid hydration issues
@@ -31,19 +32,15 @@ export default function TimelineSection() {
       textAlign="center"
       sx={{ gap: 4 }}
     >
-      <Typography
+      <GradientText
         sx={{
-          fontWeight: 700,
           mb: 2,
-          background: 'linear-gradient(to right, #6179e2, #7d4c7c, #7ad2ed)',
-          WebkitBackgroundClip: 'text',
-          WebkitTextFillColor: 'transparent',
         }}
         variant="h4"
         fontWeight={600}
       >
         Hacking begins in
-      </Typography>
+      </GradientText>
 
       <Box sx={{ width: '100%', maxWidth: 900, justifyContent: 'center' }}>
         <ThreeCountdown />

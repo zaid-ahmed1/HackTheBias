@@ -1,5 +1,6 @@
 'use client';
 
+import GradientText from '@/components/ui/GradientText';
 import { Box, Button, Typography } from '@mui/material';
 import { useRouter } from 'next/navigation';
 
@@ -19,30 +20,15 @@ export default function Hero() {
         gap: 4,
       }}
     >
-      <Typography
+      <GradientText
         variant="h2"
         sx={{
           fontWeight: 700,
           fontSize: { xs: '2.5rem', md: '4rem' },
-          backgroundImage: `
-            linear-gradient(
-              90deg,
-              #6179e2 0%,
-              #7d4c7c 25%,
-              #7ad2ed 50%,
-              #7d4c7c 75%,
-              #6179e2 100%
-            )
-          `,
-          backgroundSize: '200% 100%',
-          backgroundClip: 'text',
-          WebkitBackgroundClip: 'text',
-          WebkitTextFillColor: 'transparent',
-          animation: 'shimmerLoop 4s ease-in-out infinite',
         }}
       >
         Empowering Change Through Innovation
-      </Typography>
+      </GradientText>
 
       <Typography
         variant="h6"
