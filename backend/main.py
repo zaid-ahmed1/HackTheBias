@@ -15,7 +15,7 @@ app.add_middleware(
     allow_origins=["http://localhost:3000", 
                    "https://hack-the-bias.vercel.app",
                    "https://hack-the-bias-git-development-hack-the-bias-projects.vercel.app",
-                   "https://www.hackthebias.dev/"],  # update as needed
+                   "https://www.hackthebias.dev"],  # update as needed
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
