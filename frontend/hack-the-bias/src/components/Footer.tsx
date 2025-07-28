@@ -60,7 +60,7 @@ export default function Footer() {
       >
         <IconButton
           component={MuiLink}
-          href="https://instagram.com/hackthebias"
+          href="https://www.instagram.com/hackthebias.ucalgary/"
           target="_blank"
           rel="noopener"
           aria-label="Instagram"
@@ -78,7 +78,7 @@ export default function Footer() {
         </IconButton>
         <IconButton
           component={MuiLink}
-          href="https://linkedin.com/company/hackthebias"
+          href="https://www.linkedin.com/company/hack-the-bias/"
           target="_blank"
           rel="noopener"
           aria-label="LinkedIn"
@@ -96,7 +96,7 @@ export default function Footer() {
         </IconButton>
         <IconButton
           component={MuiLink}
-          href="https://discord.gg/hackthebias"
+          href="https://discord.gg/tpqqkYp9jT"
           target="_blank"
           rel="noopener"
           aria-label="Discord"
