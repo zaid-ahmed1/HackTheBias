@@ -1,5 +1,6 @@
 'use client';
 
+import GradientText from '@/components/ui/GradientText';
 import { Box, Typography, Grid, Paper, Avatar } from '@mui/material';
 
 const testimonials = [
@@ -29,9 +30,9 @@ const testimonials = [
 export default function TestimonialsSection() {
   return (
     <Box py={2}>
-      <Typography variant="h4" align="center" gutterBottom>
+      <GradientText variant="h4" align="center" gutterBottom>
         What People Are Saying
-      </Typography>
+      </GradientText>
       <Typography variant="body1" color="text.secondary" align="center" mb={6}>
         Hear from our past participants, mentors, and supporters.
       </Typography>

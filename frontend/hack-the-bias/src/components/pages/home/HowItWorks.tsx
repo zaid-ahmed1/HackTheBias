@@ -4,6 +4,7 @@ import { Box, Typography, Paper, Grid } from '@mui/material';
 import LightbulbIcon from '@mui/icons-material/Lightbulb';
 import GroupsIcon from '@mui/icons-material/Groups';
 import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
+import GradientText from '@/components/ui/GradientText';
 
 const steps = [
   {
@@ -38,18 +39,14 @@ export default function HowItWorksSection() {
         textAlign: 'center',
       }}
     >
-      <Typography
+      <GradientText
         variant="h4"
         sx={{
-          fontWeight: 700,
           mb: 2,
-          background: 'linear-gradient(to right, #6179e2, #7d4c7c, #7ad2ed)',
-          WebkitBackgroundClip: 'text',
-          WebkitTextFillColor: 'transparent',
         }}
       >
         How It Works
-      </Typography>
+      </GradientText>
 
       <Typography variant="body1" sx={{ mb: 6, color: 'rgba(0,0,0,0.65)' }}>
         From idea to impact — here’s what your Hack The Bias journey looks like:

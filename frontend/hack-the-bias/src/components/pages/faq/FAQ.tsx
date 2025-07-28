@@ -8,6 +8,7 @@ import {
   Typography,
 } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import GradientText from '@/components/ui/GradientText';
 
 const faqItems = [
   {
@@ -35,20 +36,16 @@ const faqItems = [
 export default function FAQ() {
   return (
     <Box py={10}>
-      <Typography
+      <GradientText
         sx={{
-          fontWeight: 700,
           mb: 2,
-          background: 'linear-gradient(to right, #6179e2, #7d4c7c, #7ad2ed)',
-          WebkitBackgroundClip: 'text',
-          WebkitTextFillColor: 'transparent',
         }}
         variant="h4"
         align="center"
         gutterBottom
       >
         Frequently Asked Questions
-      </Typography>
+      </GradientText>
       <Typography variant="body1" align="center" color="text.secondary" mb={4}>
         Got questions? We’ve got answers.
       </Typography>
