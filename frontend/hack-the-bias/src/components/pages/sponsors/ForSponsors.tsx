@@ -5,7 +5,6 @@ import SponsorsHero from './SponsorsHero';
 import EventStats from './EventStats';
 import WhyUs from './WhyUs';
 import Support from './Support';
-import CurrentSponsors from './CurrentSponsors';
 import FinalCallToAction from './FinalCallToAction';
 
 export default function ForSponsors() {
@@ -16,7 +15,7 @@ export default function ForSponsors() {
         <EventStats />
         <WhyUs />
         <Support />
-        <CurrentSponsors />
+        {/* <CurrentSponsors /> */}
         <FinalCallToAction />
       </Box>
     </Container>

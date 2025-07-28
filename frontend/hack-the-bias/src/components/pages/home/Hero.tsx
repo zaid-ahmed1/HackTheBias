@@ -24,9 +24,21 @@ export default function Hero() {
         sx={{
           fontWeight: 700,
           fontSize: { xs: '2.5rem', md: '4rem' },
-          background: 'linear-gradient(to right, #6179e2, #7d4c7c, #7ad2ed)',
+          backgroundImage: `
+            linear-gradient(
+              90deg,
+              #6179e2 0%,
+              #7d4c7c 25%,
+              #7ad2ed 50%,
+              #7d4c7c 75%,
+              #6179e2 100%
+            )
+          `,
+          backgroundSize: '200% 100%',
+          backgroundClip: 'text',
           WebkitBackgroundClip: 'text',
           WebkitTextFillColor: 'transparent',
+          animation: 'shimmerLoop 4s ease-in-out infinite',
         }}
       >
         Empowering Change Through Innovation
