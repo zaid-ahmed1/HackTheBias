@@ -30,7 +30,7 @@ export default function Navbar() {
             style={{ marginRight: '8px' }}
           />
           <Typography variant="h6" fontWeight={600} color="background.paper">
-            HackTheBias
+            Hack The Bias
           </Typography>
         </Box>
         <Box display="flex" gap={2}>
