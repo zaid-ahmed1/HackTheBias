@@ -24,7 +24,21 @@ async def preregister(data: PreregisterRequest):
         if not resp.json().get("success"):
             raise HTTPException(status_code=400, detail="CAPTCHA failed")
 
-    # 2. Insert into Supabase
+    # 2. Check if email already exists
+    try:
+        existing_response = supabase.table("preregistrations").select("email").eq("email", data.email).execute()
+        
+        if existing_response.data:
+            # Email already exists - return special status
+            return {
+                "message": "This Email is Already Pre-Registered! Stay Tuned for more information",
+                "status": "already_registered"
+            }
+    except Exception as e:
+        print("Database check error:", e)
+        raise HTTPException(status_code=500, detail="Error checking database")
+
+    # 3. Insert new email into Supabase
     try:
         response = supabase.table("preregistrations").insert({
             "name": data.name,
@@ -34,11 +48,14 @@ async def preregister(data: PreregisterRequest):
         print("Supabase insert error:", e)
         raise HTTPException(status_code=500, detail="Error saving data")
 
-    # 3. Send confirmation email
+    # 4. Send confirmation email for new registrations
     try:
         await send_prereg_email(data.email, data.name)
     except Exception as e:
         print("Email sending failed:", e)
         raise HTTPException(status_code=500, detail="Failed to send confirmation email")
 
-    return {"message": "Successfully added to mailing list"}
+    return {
+        "message": "Successfully added to mailing list",
+        "status": "success"
+    }

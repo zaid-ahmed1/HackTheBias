@@ -22,7 +22,6 @@ const teamMembers = [
     position: 'VP Special Events Coordinator / Lead Organizer',
     avatar: '/team/zaid.jpg',
   },
-
   {
     name: 'Vivian Tat',
     program: 'Electrical Engineering',
@@ -55,7 +54,6 @@ const teamMembers = [
     position: 'Marketing + Design',
     avatar: '/team/abiya.jpg',
   },
-
   {
     name: 'Joy Wang',
     program: 'Computer Science',
@@ -73,7 +71,7 @@ export default function MeetTheTeamSection() {
 
   const scroll = (direction: 'left' | 'right') => {
     if (scrollRef.current) {
-      const scrollAmount = isMobile ? 280 : 320;
+      const scrollAmount = isMobile ? 300 : 320;
       scrollRef.current.scrollBy({
         left: direction === 'left' ? -scrollAmount : scrollAmount,
         behavior: 'smooth',
@@ -165,9 +163,9 @@ export default function MeetTheTeamSection() {
               key={index}
               elevation={3}
               sx={{
-                minWidth: { xs: '260px', sm: '300px' },
-                height: { xs: '280px', sm: '320px' }, // Fixed height for uniform cards
-                p: 3,
+                minWidth: { xs: '280px', sm: '300px' }, // Increased mobile width
+                height: { xs: '340px', sm: '320px' }, // Increased mobile height
+                p: { xs: 2.5, sm: 3 }, // Responsive padding
                 borderRadius: 3,
                 textAlign: 'center',
                 background: 'linear-gradient(135deg, #ffffff 0%, #f8f9ff 100%)',
@@ -189,10 +187,10 @@ export default function MeetTheTeamSection() {
                   src={member.avatar}
                   alt={member.name}
                   sx={{
-                    width: 80,
-                    height: 80,
+                    width: { xs: 70, sm: 80 }, // Slightly smaller avatar on mobile
+                    height: { xs: 70, sm: 80 },
                     mx: 'auto',
-                    mb: 2,
+                    mb: { xs: 1.5, sm: 2 }, // Responsive margin
                     border: '3px solid #B7C4FC',
                     boxShadow: '0 4px 12px rgba(183, 196, 252, 0.3)',
                   }}
@@ -204,7 +202,7 @@ export default function MeetTheTeamSection() {
                   sx={{
                     mb: 1,
                     color: '#153166',
-                    fontSize: { xs: '1.1rem', sm: '1.25rem' },
+                    fontSize: { xs: '1rem', sm: '1.25rem' }, // Smaller on mobile
                     lineHeight: 1.2,
                   }}
                 >
@@ -216,8 +214,9 @@ export default function MeetTheTeamSection() {
                   color="text.secondary"
                   sx={{
                     mb: 0.5,
-                    fontSize: '0.9rem',
+                    fontSize: { xs: '0.8rem', sm: '0.9rem' }, // Responsive font size
                     fontWeight: 500,
+                    lineHeight: 1.3,
                   }}
                 >
                   {member.program}
@@ -228,7 +227,7 @@ export default function MeetTheTeamSection() {
                   color="text.secondary"
                   sx={{
                     mb: 1,
-                    fontSize: '0.85rem',
+                    fontSize: { xs: '0.75rem', sm: '0.85rem' },
                   }}
                 >
                   {member.year}
@@ -238,8 +237,8 @@ export default function MeetTheTeamSection() {
                   variant="body2"
                   color="text.secondary"
                   sx={{
-                    mb: 2,
-                    fontSize: '0.8rem',
+                    mb: { xs: 1.5, sm: 2 }, // Responsive margin
+                    fontSize: { xs: '0.7rem', sm: '0.8rem' },
                     fontStyle: 'italic',
                   }}
                 >
@@ -252,10 +251,10 @@ export default function MeetTheTeamSection() {
                 sx={{
                   backgroundColor: '#153166',
                   color: 'white',
-                  px: 2,
+                  px: { xs: 1.5, sm: 2 }, // Responsive padding
                   py: 1,
                   borderRadius: '20px',
-                  minHeight: '50px', // Consistent height for all badges
+                  minHeight: { xs: '45px', sm: '50px' }, // Responsive height
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
@@ -266,7 +265,7 @@ export default function MeetTheTeamSection() {
                   variant="body2"
                   fontWeight={600}
                   sx={{
-                    fontSize: '0.75rem',
+                    fontSize: { xs: '0.7rem', sm: '0.75rem' }, // Smaller text on mobile
                     textAlign: 'center',
                     lineHeight: 1.3,
                   }}
