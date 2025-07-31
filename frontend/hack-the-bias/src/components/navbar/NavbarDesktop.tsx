@@ -32,7 +32,7 @@ export default function NavbarDesktop() {
           transition: 'all 0.2s ease',
         }}
       >
-        Pre-register
+        Pre-Register
       </PreRegisterButton>
     </Box>
   );

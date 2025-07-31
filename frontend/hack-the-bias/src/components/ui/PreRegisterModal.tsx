@@ -89,7 +89,7 @@ export default function PreRegisterModal({
   return (
     <>
       <Dialog open={open} onClose={handleClose}>
-        <DialogTitle>Pre-register for Hack the Bias 2026</DialogTitle>
+        <DialogTitle>Pre-Register for Hack the Bias 2026</DialogTitle>
         <DialogContent>
           <TextField
             fullWidth

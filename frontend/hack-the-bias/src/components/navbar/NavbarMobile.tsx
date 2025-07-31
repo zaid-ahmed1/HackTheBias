@@ -147,7 +147,7 @@ function DrawerContent({
             },
           }}
         >
-          Pre-register Now
+          Pre-Register Now
         </PreRegisterButton>
       </Box>
     </Box>
