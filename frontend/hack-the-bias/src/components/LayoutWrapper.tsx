@@ -1,7 +1,7 @@
 'use client';
 
 import { ReactNode, useRef, useEffect, useState } from 'react'; // Change useLayoutEffect to useEffect
-import Navbar from './Navbar';
+import Navbar from './navbar/Navbar';
 import Footer from './Footer';
 
 export default function LayoutWrapper({ children }: { children: ReactNode }) {
