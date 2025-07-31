@@ -1,5 +1,6 @@
 'use client';
 
+import GradientText from '@/components/ui/GradientText';
 import { Box, Typography, Divider } from '@mui/material';
 
 export default function AboutSection() {
@@ -11,20 +12,17 @@ export default function AboutSection() {
         mx: 'auto',
         px: 3,
         textAlign: 'center',
+        pt: 4,
       }}
     >
-      <Typography
+      <GradientText
         variant="h4"
         sx={{
-          fontWeight: 700,
           mb: 2,
-          background: 'linear-gradient(to right, #6179e2, #7d4c7c, #7ad2ed)',
-          WebkitBackgroundClip: 'text',
-          WebkitTextFillColor: 'transparent',
         }}
       >
         About Hack The Bias
-      </Typography>
+      </GradientText>
 
       <Divider
         sx={{

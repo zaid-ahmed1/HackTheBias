@@ -1,5 +1,6 @@
 'use client';
 
+import GradientText from '@/components/ui/GradientText';
 import { Box, Button, Typography } from '@mui/material';
 import { useRouter } from 'next/navigation';
 
@@ -19,18 +20,15 @@ export default function Hero() {
         gap: 4,
       }}
     >
-      <Typography
+      <GradientText
         variant="h2"
         sx={{
           fontWeight: 700,
           fontSize: { xs: '2.5rem', md: '4rem' },
-          background: 'linear-gradient(to right, #6179e2, #7d4c7c, #7ad2ed)',
-          WebkitBackgroundClip: 'text',
-          WebkitTextFillColor: 'transparent',
         }}
       >
         Empowering Change Through Innovation
-      </Typography>
+      </GradientText>
 
       <Typography
         variant="h6"
@@ -62,9 +60,9 @@ export default function Hero() {
             boxShadow: '0 8px 20px rgba(0,0,0,0.2)',
           },
         }}
-        onClick={() => router.push('/about')}
+        onClick={() => router.push('https://robogalsucalgary.com/')}
       >
-        Learn More
+        Learn More About Robogals
       </Button>
     </Box>
   );

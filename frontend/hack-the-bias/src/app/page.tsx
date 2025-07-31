@@ -1,26 +1,12 @@
 import AboutSection from '@/components/pages/home/AboutSection';
 import Hero from '@/components/pages/home/Hero';
-import HowItWorksSection from '../components/pages/home/HowItWorks';
 import TimelineSection from '@/components/pages/home/Timeline';
-import SponsorsSection from '@/components/pages/home/Sponsors';
-import TestimonialsSection from '../components/pages/home/Testimonials';
 import FAQPreview from '@/components/pages/home/FAQPreview';
 import CallToAction from '@/components/pages/home/CallToAction';
-
-// async function getBackendStatus() {
-//   try {
-//     const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}`, {
-//       cache: 'no-store',
-//     });
-//     if (!res.ok) return 'Failed to connect';
-
-//     const data = await res.json();
-//     return data.status;
-//   } catch (error) {
-//     console.error('API Error:', error);
-//     return 'API is unavailable';
-//   }
-// }
+import JoinCommunity from '@/components/pages/home/JoinCommunity';
+import MeetTheTeamSection from '@/components/pages/home/meet-the-team/MeetTheTeamSection';
+import EventStats from '@/components/pages/home/EventStats';
+import { HowItWorksSection } from '@/components/pages/home/how-it-works';
 
 export default async function Home() {
   return (
@@ -28,11 +14,14 @@ export default async function Home() {
       <TimelineSection />
       <Hero />
       <AboutSection />
+      <EventStats />
       <HowItWorksSection />
-      <SponsorsSection />
-      <TestimonialsSection />
+      {/* Bring back when we get sponsors */}
+      {/* <SponsorsSection /> */}
+      <MeetTheTeamSection />
       <FAQPreview />
       <CallToAction />
+      <JoinCommunity />
     </main>
   );
 }

@@ -10,6 +10,7 @@ import {
 } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Link from 'next/link';
+import GradientText from '@/components/ui/GradientText';
 
 const faqItems = [
   {
@@ -37,9 +38,9 @@ const faqItems = [
 export default function FAQPreview() {
   return (
     <Box py={2}>
-      <Typography variant="h4" align="center" gutterBottom>
+      <GradientText variant="h4" align="center" gutterBottom>
         Frequently Asked Questions
-      </Typography>
+      </GradientText>
       <Typography variant="body1" align="center" color="text.secondary" mb={4}>
         Got questions? We’ve got answers.
       </Typography>

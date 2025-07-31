@@ -1,7 +1,8 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 'use client';
 
-import { Box, Button, Typography, Paper } from '@mui/material';
-import Link from 'next/link';
+import { Box, Typography, Paper } from '@mui/material';
+import PreRegisterButton from '@/components/ui/PreRegisterButton';
 
 export default function CallToAction() {
   return (
@@ -26,21 +27,14 @@ export default function CallToAction() {
           something that matters.
         </Typography>
 
-        <Button
+        <PreRegisterButton
           variant="contained"
           color="secondary"
           size="large"
-          component={Link}
-          href="/register"
-          sx={{
-            fontWeight: 600,
-            px: 4,
-            py: 1.5,
-            borderRadius: 2,
-          }}
+          sx={{ fontWeight: 600, px: 4, py: 1.5, borderRadius: 2 }}
         >
-          Sign Up Now
-        </Button>
+          Pre-register Now
+        </PreRegisterButton>
       </Paper>
     </Box>
   );
