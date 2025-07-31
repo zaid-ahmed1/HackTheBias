@@ -24,7 +24,7 @@ export default function About() {
           WebkitTextFillColor: 'transparent',
         }}
       >
-        About HackTheBias
+        About Hack the Bias
       </Typography>
 
       <Divider
@@ -42,7 +42,7 @@ export default function About() {
         variant="body1"
         sx={{ color: 'rgba(0,0,0,0.75)', lineHeight: 1.8 }}
       >
-        HackTheBias is a community-powered hackathon created for students,
+        Hack the Bias is a community-powered hackathon created for students,
         technologists, and activists who want to build solutions that tackle
         real-world issues. From racial justice to accessibility, our mission is
         to inspire innovation that amplifies underrepresented voices and drives

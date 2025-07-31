@@ -25,7 +25,7 @@ export default function Footer() {
     >
       <Container maxWidth="lg">
         <Typography variant="body2" color="textSecondary" align="center">
-          © {year} HackTheBias. All rights reserved.
+          © {year} Hack the Bias. All rights reserved.
         </Typography>
       </Container>
     </Box>

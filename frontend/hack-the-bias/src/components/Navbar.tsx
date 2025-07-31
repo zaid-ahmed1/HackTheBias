@@ -24,13 +24,13 @@ export default function Navbar() {
         >
           <Image
             src="/chip.png"
-            alt="HackTheBias Logo"
+            alt="Hack the Bias Logo"
             width={60}
             height={60}
             style={{ marginRight: '8px' }}
           />
           <Typography variant="h6" fontWeight={600} color="background.paper">
-            HackTheBias
+            Hack the Bias
           </Typography>
         </Box>
         <Box display="flex" gap={2}>
