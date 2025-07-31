@@ -38,7 +38,7 @@ export default function Hero() {
           fontWeight: 400,
         }}
       >
-        Hack The Bias is a youth-led hackathon that challenges developers,
+        Hack the Bias is a student-run initiative of Robogals UCalgary that challenges developers,
         designers, and dreamers to build tech for social justice, inclusion, and
         equity.
       </Typography>

@@ -30,7 +30,7 @@ export default function JoinCommunity() {
         }}
       >
         <Typography variant="h4" fontWeight="bold" gutterBottom>
-          Join the Hack The Bias Community
+          Join the Hack the Bias Community
         </Typography>
         <Typography variant="body1" sx={{ mb: 4, opacity: 0.9 }}>
           Connect with hackers, organizers, and supporters from around the

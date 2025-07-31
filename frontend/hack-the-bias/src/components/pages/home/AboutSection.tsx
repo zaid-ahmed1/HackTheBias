@@ -21,7 +21,7 @@ export default function AboutSection() {
           mb: 2,
         }}
       >
-        About Hack The Bias
+        About Hack the Bias
       </GradientText>
 
       <Divider

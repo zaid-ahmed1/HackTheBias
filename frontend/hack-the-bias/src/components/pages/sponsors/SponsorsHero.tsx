@@ -49,7 +49,7 @@ export default function SponsorsHero() {
       }}
     >
       <Typography variant="h2" fontWeight="bold" gutterBottom>
-        Partner with Hack The Bias
+        Partner with Hack the Bias
       </Typography>
       <Typography
         variant="h6"

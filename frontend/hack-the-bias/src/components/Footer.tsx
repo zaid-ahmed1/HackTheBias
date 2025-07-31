@@ -42,7 +42,7 @@ export default function Footer() {
         >
           {/* Centered Text */}
           <Typography variant="body2" color="textSecondary" align="center">
-            © {year} Hack The Bias. All rights reserved.
+            © {year} Hack the Bias. All rights reserved.
           </Typography>
         </Box>
       </Container>

@@ -27,7 +27,7 @@ export default function HowItWorksSection() {
       </GradientText>
 
       <Typography variant="body1" sx={{ mb: 6, color: 'rgba(0,0,0,0.65)' }}>
-        From idea to impact — here&apos;s what your Hack The Bias journey looks
+        From idea to impact — here&apos;s what your Hack the Bias journey looks
         like:
       </Typography>
 

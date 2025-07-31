@@ -18,7 +18,7 @@ export default function MeetTheTeamSection() {
         mb={4}
         sx={{ maxWidth: '600px', mx: 'auto' }}
       >
-        The passionate students behind Hack The Bias, working to create a more
+        The passionate students behind Hack the Bias, working to create a more
         inclusive tech community.
       </Typography>
 
