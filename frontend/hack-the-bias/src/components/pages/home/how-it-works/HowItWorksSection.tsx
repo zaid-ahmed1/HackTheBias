@@ -23,7 +23,7 @@ export default function HowItWorksSection() {
           mb: 2,
         }}
       >
-        How It Works
+        How it Works
       </GradientText>
 
       <Typography variant="body1" sx={{ mb: 6, color: 'rgba(0,0,0,0.65)' }}>

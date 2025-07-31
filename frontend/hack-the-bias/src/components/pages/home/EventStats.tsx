@@ -10,8 +10,8 @@ import GradientText from '@/components/ui/GradientText';
 
 const eventStats = [
   {
-    label: 'Event Style',
-    value: '36 Hours, In Person & Virtual',
+    label: 'Event',
+    value: '36 Hours, In Person @ UCalgary',
     icon: <Schedule />,
     gradient: 'linear-gradient(135deg, #153166 0%, #4A6FA5 100%)',
   },
