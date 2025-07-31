@@ -54,7 +54,7 @@ export default function Navbar() {
             sx={{ textDecoration: 'none' }}
           >
             <Image
-              src="/pixel.svg"
+              src="/mascots/mascot_blue.svg"
               alt="Hack The Bias Logo"
               width={isMobile ? 50 : 60}
               height={isMobile ? 50 : 60}

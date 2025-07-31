@@ -44,7 +44,7 @@ export default function WhyUs() {
         sx={{ maxWidth: 600, mx: 'auto', mb: 4 }}
       >
         An initiative by Robogals UCalgary, building on partnerships with
-        industry leaders like KPMG, Cenovus Energy, and the City of Calgary.
+        industry leaders
       </Typography>
 
       <Grid container spacing={4}>

@@ -24,6 +24,7 @@ export default function CallToAction() {
   const [formData, setFormData] = useState({ name: '', email: '' });
   const [captchaToken, setCaptchaToken] = useState('');
   const [submitted, setSubmitted] = useState(false);
+  const [alreadyRegistered, setAlreadyRegistered] = useState(false);
   const [error, setError] = useState('');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -51,7 +52,16 @@ export default function CallToAction() {
       );
 
       if (res.ok) {
-        setSubmitted(true);
+        const result = await res.json();
+
+        // Check if email was already registered
+        if (result.status === 'already_registered') {
+          setAlreadyRegistered(true);
+        } else {
+          setSubmitted(true);
+        }
+
+        // Reset form and close dialog
         setFormData({ name: '', email: '' });
         setCaptchaToken('');
         setOpen(false);
@@ -104,11 +114,10 @@ export default function CallToAction() {
         open={open}
         onClose={() => {
           if (loading) return;
-
           setOpen(false);
         }}
       >
-        <DialogTitle>Pre-register for HackTheBias 2026</DialogTitle>
+        <DialogTitle>Pre-register for Hack The Bias 2026</DialogTitle>
         <DialogContent>
           <TextField
             fullWidth
@@ -158,8 +167,18 @@ export default function CallToAction() {
         onClose={() => setSubmitted(false)}
       >
         <Alert severity="success">
-          Thanks! You’re now on the list. A welcome E-amil will be sent to your
-          inbox shortly
+          Thanks! You&apos;re now on the list. A welcome email will be sent to
+          your inbox shortly.
+        </Alert>
+      </Snackbar>
+
+      <Snackbar
+        open={alreadyRegistered}
+        autoHideDuration={6000}
+        onClose={() => setAlreadyRegistered(false)}
+      >
+        <Alert severity="info">
+          This Email is Already Pre-Registered! Stay Tuned for more information.
         </Alert>
       </Snackbar>
     </Box>
