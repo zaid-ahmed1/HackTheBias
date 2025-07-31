@@ -55,7 +55,7 @@ export default function Navbar() {
           >
             <Image
               src="/mascots/mascot_blue.svg"
-              alt="Hack The Bias Logo"
+              alt="Hack the Bias Logo"
               width={isMobile ? 50 : 60}
               height={isMobile ? 50 : 60}
               style={{ marginRight: '8px' }}
@@ -69,7 +69,7 @@ export default function Navbar() {
                 display: { xs: 'none', sm: 'block' },
               }}
             >
-              Hack The Bias
+              Hack the Bias
             </Typography>
             <Typography
               variant="h6"

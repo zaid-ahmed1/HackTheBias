@@ -6,21 +6,22 @@ import { Box, Typography, Grid, Paper, Avatar } from '@mui/material';
 const testimonials = [
   {
     name: 'Alex Johnson',
-    role: '2024 HackTheBias Participant',
+    role: 'Hack the Bias Participant 2025',
     quote:
-      "HackTheBias was one of the most inclusive and inspiring hackathons I've ever attended. I met amazing people and built something that truly mattered.",
+      "Hack the Bias was one of the most inclusive and inspiring hackathons I've ever attended. I met amazing people and built something that truly mattered.",
     avatar: '/testimonials/alex.jpg',
   },
   {
     name: 'Sofia Lin',
-    role: 'Mentor & Sponsor',
+    role: 'Mentor',
+
     quote:
-      'It was incredible seeing the creativity and diversity of the teams. Supporting HackTheBias aligns perfectly with our values.',
+      'It was incredible seeing the creativity and diversity of the teams. Supporting Hack the Bias aligns perfectly with our values.',
     avatar: '/testimonials/sofia.jpg',
   },
   {
     name: 'Marcus Lee',
-    role: 'Winning Team Member',
+    role: 'Hack the Bias Participant 2025',
     quote:
       'From the mentors to the workshops, everything was top-notch. I walked away with new skills, new friends, and a renewed sense of purpose.',
     avatar: '/testimonials/marcus.jpg',

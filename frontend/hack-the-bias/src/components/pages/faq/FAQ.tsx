@@ -6,15 +6,16 @@ import {
   AccordionDetails,
   Box,
   Typography,
+  Link,
 } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import GradientText from '@/components/ui/GradientText';
 
 const faqItems = [
   {
-    question: 'Who can participate in HackTheBias?',
+    question: 'Who can participate in Hack the Bias?',
     answer:
-      'HackTheBias is open to everyone! Whether you’re a beginner or an experienced developer, designer, or activist — we welcome all skill levels.',
+      'Hack the Bias is open to everyone! Whether you’re a beginner or an experienced developer, designer, or activist — we welcome all skill levels.',
   },
   {
     question: 'Do I need a team to join?',
@@ -22,9 +23,9 @@ const faqItems = [
       'Not at all! You can register solo and join a team at our team formation event at the beginning of the hackathon.',
   },
   {
-    question: 'Is HackTheBias free?',
+    question: 'Is Hack the Bias free?',
     answer:
-      'Yes, participating in HackTheBias is completely free. We’ll even provide meals, swag, and some travel reimbursements for selected applicants.',
+      'Yes, participating in Hack the Bias is completely free. We’ll even provide meals, swag, and some travel reimbursements for selected applicants.',
   },
   {
     question: 'What’s the main theme of the hackathon?',
@@ -37,9 +38,7 @@ export default function FAQ() {
   return (
     <Box py={10}>
       <GradientText
-        sx={{
-          mb: 2,
-        }}
+        sx={{ mb: 2 }}
         variant="h4"
         align="center"
         gutterBottom
@@ -61,6 +60,15 @@ export default function FAQ() {
             </AccordionDetails>
           </Accordion>
         ))}
+
+        <Box mt={6} textAlign="center">
+          <Typography variant="body1" color="text.secondary">
+            Got a question we haven’t answered here?{' '}
+            <Link href="mailto:info@hackthebias.com" underline="hover">
+              Shoot us an email!
+            </Link>
+          </Typography>
+        </Box>
       </Box>
     </Box>
   );

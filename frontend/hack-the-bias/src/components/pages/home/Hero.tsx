@@ -15,9 +15,9 @@ export default function Hero() {
         flexDirection: 'column',
         alignItems: 'center',
         textAlign: 'center',
-        py: 2,
+        py: 3,
         px: 3,
-        gap: 4,
+        gap: 7,
       }}
     >
       <GradientText
@@ -38,7 +38,7 @@ export default function Hero() {
           fontWeight: 400,
         }}
       >
-        Hack The Bias is a youth-led hackathon that challenges developers,
+        Hack the Bias is a student-run initiative of Robogals UCalgary that challenges developers,
         designers, and dreamers to build tech for social justice, inclusion, and
         equity.
       </Typography>

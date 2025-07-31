@@ -22,7 +22,7 @@ export default function DesktopTimeline({
         direction="row"
         justifyContent="space-between"
         alignItems="flex-start"
-        sx={{ position: 'relative', zIndex: 1 }}
+        sx={{ position: 'relative', zIndex: 1, gap: 6 }}
       >
         {steps.map((step, index) => (
           <Box

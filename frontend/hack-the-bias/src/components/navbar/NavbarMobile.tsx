@@ -87,13 +87,13 @@ function DrawerContent({
         <Box display="flex" alignItems="center">
           <Image
             src="/mascots/mascot_blue.svg"
-            alt="Hack The Bias Logo"
+            alt="Hack the Bias Logo"
             width={40}
             height={40}
             style={{ marginRight: '8px' }}
           />
           <Typography variant="h6" fontWeight={600}>
-            Hack The Bias
+            Hack the Bias
           </Typography>
         </Box>
         <IconButton onClick={onClose} sx={{ color: 'white' }}>
@@ -147,7 +147,7 @@ function DrawerContent({
             },
           }}
         >
-          Pre-register Now
+          Pre-Register Now
         </PreRegisterButton>
       </Box>
     </Box>

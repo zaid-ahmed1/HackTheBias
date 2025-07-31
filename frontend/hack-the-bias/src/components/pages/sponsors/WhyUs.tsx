@@ -35,7 +35,7 @@ export default function WhyUs() {
         textAlign="center"
         gutterBottom
       >
-        Why Sponsor HackTheBias?
+        Why Sponsor Hack the Bias?
       </Typography>
       <Typography
         variant="body1"
