@@ -15,9 +15,9 @@ export default function Hero() {
         flexDirection: 'column',
         alignItems: 'center',
         textAlign: 'center',
-        py: 2,
+        py: 3,
         px: 3,
-        gap: 4,
+        gap: 7,
       }}
     >
       <GradientText
