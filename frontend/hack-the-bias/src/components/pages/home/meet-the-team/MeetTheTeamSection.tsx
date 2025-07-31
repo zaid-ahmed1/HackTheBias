@@ -9,7 +9,7 @@ export default function MeetTheTeamSection() {
   return (
     <Box py={6}>
       <GradientText variant="h4" align="center" gutterBottom>
-        Meet The Team
+        Meet the Team
       </GradientText>
       <Typography
         variant="body1"
