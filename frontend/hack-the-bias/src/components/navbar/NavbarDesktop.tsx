@@ -3,15 +3,37 @@
 import Link from 'next/link';
 import { Button, Box } from '@mui/material';
 import { navigationItems } from './Navbar';
+import PreRegisterButton from '@/components/ui/PreRegisterButton';
 
 export default function NavbarDesktop() {
   return (
-    <Box display={{ xs: 'none', md: 'flex' }} gap={2}>
-      {navigationItems.map((item) => (
+    <Box display={{ xs: 'none', md: 'flex' }} gap={2} alignItems="center">
+      {navigationItems.map((item: { href: string; label: string }) => (
         <NavButton key={item.href} href={item.href}>
           {item.label}
         </NavButton>
       ))}
+
+      {/* Pre-Register Button */}
+      <PreRegisterButton
+        variant="contained"
+        sx={{
+          backgroundColor: '#B7C4FC',
+          color: '#153166',
+          fontWeight: 600,
+          px: 3,
+          py: 1,
+          borderRadius: '12px',
+          textTransform: 'none',
+          '&:hover': {
+            backgroundColor: '#A0B4FB',
+            transform: 'translateY(-1px)',
+          },
+          transition: 'all 0.2s ease',
+        }}
+      >
+        Pre-register
+      </PreRegisterButton>
     </Box>
   );
 }

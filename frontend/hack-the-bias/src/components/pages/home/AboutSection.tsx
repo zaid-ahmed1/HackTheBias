@@ -12,6 +12,7 @@ export default function AboutSection() {
         mx: 'auto',
         px: 3,
         textAlign: 'center',
+        pt: 4,
       }}
     >
       <GradientText

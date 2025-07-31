@@ -7,13 +7,13 @@ import {
   List,
   ListItem,
   ListItemText,
-  Button,
   Box,
   Typography,
 } from '@mui/material';
 import { Menu as MenuIcon, Close as CloseIcon } from '@mui/icons-material';
 import Image from 'next/image';
 import { navigationItems } from './Navbar';
+import PreRegisterButton from '@/components/ui/PreRegisterButton';
 
 interface NavbarMobileProps {
   mobileOpen: boolean;
@@ -73,8 +73,6 @@ function DrawerContent({
 }) {
   return (
     <Box sx={{ pt: { xs: 9, sm: 10 } }}>
-      {' '}
-      {/* Added top padding to clear navbar */}
       {/* Drawer Header */}
       <Box
         sx={{
@@ -88,7 +86,7 @@ function DrawerContent({
       >
         <Box display="flex" alignItems="center">
           <Image
-            src="/pixel.svg"
+            src="/mascots/mascot_blue.svg"
             alt="Hack The Bias Logo"
             width={40}
             height={40}
@@ -102,6 +100,7 @@ function DrawerContent({
           <CloseIcon />
         </IconButton>
       </Box>
+
       {/* Navigation Items */}
       <List sx={{ pt: 1 }}>
         {navigationItems.map((item) => (
@@ -131,12 +130,10 @@ function DrawerContent({
           </ListItem>
         ))}
       </List>
-      {/* Call to Action Button */}
+
+      {/* Pre-Register Button */}
       <Box sx={{ px: 2, mt: 2 }}>
-        <Button
-          component={Link}
-          href="/register"
-          onClick={onNavClick}
+        <PreRegisterButton
           variant="contained"
           fullWidth
           sx={{
@@ -150,8 +147,8 @@ function DrawerContent({
             },
           }}
         >
-          Register Now
-        </Button>
+          Pre-register Now
+        </PreRegisterButton>
       </Box>
     </Box>
   );
