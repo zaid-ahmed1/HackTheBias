@@ -6,6 +6,7 @@ import {
   AccordionDetails,
   Box,
   Typography,
+  Link,
 } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import GradientText from '@/components/ui/GradientText';
@@ -37,9 +38,7 @@ export default function FAQ() {
   return (
     <Box py={10}>
       <GradientText
-        sx={{
-          mb: 2,
-        }}
+        sx={{ mb: 2 }}
         variant="h4"
         align="center"
         gutterBottom
@@ -61,6 +60,15 @@ export default function FAQ() {
             </AccordionDetails>
           </Accordion>
         ))}
+
+        <Box mt={6} textAlign="center">
+          <Typography variant="body1" color="text.secondary">
+            Got a question we haven’t answered here?{' '}
+            <Link href="mailto:info@hackthebias.com" underline="hover">
+              Shoot us an email!
+            </Link>
+          </Typography>
+        </Box>
       </Box>
     </Box>
   );
