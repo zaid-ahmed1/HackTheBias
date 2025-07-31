@@ -60,9 +60,9 @@ export default function Hero() {
             boxShadow: '0 8px 20px rgba(0,0,0,0.2)',
           },
         }}
-        onClick={() => router.push('/about')}
+        onClick={() => router.push('https://robogalsucalgary.com/')}
       >
-        Learn More
+        Learn More About Robogals
       </Button>
     </Box>
   );
