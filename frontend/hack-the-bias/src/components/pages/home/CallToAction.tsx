@@ -33,7 +33,7 @@ export default function CallToAction() {
           size="large"
           sx={{ fontWeight: 600, px: 4, py: 1.5, borderRadius: 2 }}
         >
-          Pre-register Now
+          Pre-Register Now
         </PreRegisterButton>
       </Paper>
     </Box>

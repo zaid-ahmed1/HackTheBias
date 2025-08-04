@@ -12,10 +12,10 @@ async def send_prereg_email(to_email: str, name: str):
         f"""
 Hi {name},
 
-Thanks for signing up for HackTheBias 2026!
+Thanks for signing up for Hack the Bias 2026!
 We'll keep you updated as we get closer to the event and notify you as soon as registration opens.
 
-– The HackTheBias Team
+– The Hack the Bias Team
 """
     )
 

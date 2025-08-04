@@ -21,7 +21,7 @@ export default function AboutSection() {
           mb: 2,
         }}
       >
-        About Hack The Bias
+        About Hack the Bias
       </GradientText>
 
       <Divider
@@ -39,7 +39,7 @@ export default function AboutSection() {
         variant="body1"
         sx={{ color: 'rgba(0,0,0,0.75)', lineHeight: 1.8 }}
       >
-        HackTheBias is a community-powered hackathon created for students,
+        Hack the Bias is a community-powered hackathon created for students,
         technologists, and activists who want to build solutions that tackle
         real-world issues. From racial justice to accessibility, our mission is
         to inspire innovation that amplifies underrepresented voices and drives
