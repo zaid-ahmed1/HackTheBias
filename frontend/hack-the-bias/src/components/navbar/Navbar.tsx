@@ -16,7 +16,7 @@ import NavbarMobile from './NavbarMobile';
 
 export const navigationItems = [
   { label: 'Home', href: '/' },
-  { label: 'Robogals', href: 'https://robogalsucalgary.com/' },
+  { label: 'Robogals', href: '/robogals' },
   { label: 'For Sponsors', href: '/sponsors' },
   { label: 'FAQ', href: '/faq' },
 ];
