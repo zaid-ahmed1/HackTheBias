@@ -6,7 +6,6 @@ import GradientText from '@/components/ui/GradientText';
 
 const sponsors = [
   {
-    name: 'Arcurve',
     logo: '/sponsors/arcurve.png',
     url: 'https://arcurve.com/',
   },
