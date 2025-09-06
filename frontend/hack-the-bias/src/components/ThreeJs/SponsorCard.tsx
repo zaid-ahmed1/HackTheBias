@@ -2,12 +2,13 @@
 'use client';
 
 import React, { useRef, useState, useEffect } from 'react';
-import { Canvas, useFrame } from '@react-three/fiber';
+import { Canvas, useFrame, useLoader } from '@react-three/fiber';
 import { Text, Image as DreiImage } from '@react-three/drei';
 import Image from 'next/image';
+import { TextureLoader } from 'three';
 
 interface Sponsor {
-  name: string;
+  name?: string;
   logo: string;
   url: string;
 }
@@ -22,6 +23,11 @@ function FloatingLogo({ sponsor, position, index }: FloatingLogoProps) {
   const logoRef = useRef<any>(null!);
   const textRef = useRef<any>(null!);
   const [hovered, setHover] = useState(false);
+  const texture = useLoader(TextureLoader, sponsor.logo);
+  const aspect = texture.image.width / texture.image.height;
+
+  const cardWidth = 10;
+  const cardHeight = cardWidth / aspect;
 
   useEffect(() => {
     document.body.style.cursor = hovered ? 'pointer' : 'auto';
@@ -45,7 +51,10 @@ function FloatingLogo({ sponsor, position, index }: FloatingLogoProps) {
       // Text follows logo with slight offset
       textRef.current.position.x = position[0];
       textRef.current.position.y =
-        logoRef.current.position.y - 3 + Math.sin(time * floatSpeed) * 0.1;
+        logoRef.current.position.y -
+        cardHeight / 2 -
+        0.5 +
+        Math.sin(time * floatSpeed) * 0.1;
       textRef.current.position.z = position[2] + 0.5;
     }
   });
@@ -67,7 +76,7 @@ function FloatingLogo({ sponsor, position, index }: FloatingLogoProps) {
         ref={logoRef}
         url={sponsor.logo}
         position={position}
-        scale={[5, 5]}
+        scale={[cardWidth, cardHeight]}
         transparent
       />
 
@@ -103,7 +112,7 @@ function FloatingGrid({ sponsors }: { sponsors: Sponsor[] }) {
 
   return (
     <Canvas
-      camera={{ position: [0, 0, 10], fov: 40 }}
+      camera={{ position: [0, 0, 12], fov: 40 }}
       style={{ background: 'transparent' }}
       gl={{ antialias: false, alpha: true }}
     >
@@ -130,8 +139,8 @@ function FallbackSponsors({ sponsors }: { sponsors: Sponsor[] }) {
       style={{
         display: 'grid',
         gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-        gap: '10px',
-        padding: '5px',
+        gap: '20px',
+        padding: '20px',
       }}
     >
       {sponsors.map((sponsor) => (
@@ -147,7 +156,7 @@ function FallbackSponsors({ sponsors }: { sponsors: Sponsor[] }) {
         >
           <Image
             src={sponsor.logo}
-            alt={sponsor.name}
+            alt={sponsor.name || 'Sponsor Logo'}
             width={200}
             height={60}
             style={{
