@@ -7,6 +7,7 @@ import JoinCommunity from '@/components/pages/home/JoinCommunity';
 import MeetTheTeamSection from '@/components/pages/home/meet-the-team/MeetTheTeamSection';
 import EventStats from '@/components/pages/home/EventStats';
 import { HowItWorksSection } from '@/components/pages/home/how-it-works';
+import SponsorsSection from '@/components/pages/home/Sponsors';
 
 export default async function Home() {
   return (
@@ -16,8 +17,7 @@ export default async function Home() {
       <AboutSection />
       <EventStats />
       <HowItWorksSection />
-      {/* Bring back when we get sponsors */}
-      {/* <SponsorsSection /> */}
+      <SponsorsSection />
       <MeetTheTeamSection />
       <FAQPreview />
       <CallToAction />
