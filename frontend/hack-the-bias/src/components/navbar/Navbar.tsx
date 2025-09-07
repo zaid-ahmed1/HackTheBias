@@ -80,7 +80,7 @@ export default function Navbar() {
                 display: { xs: 'block', sm: 'none' },
               }}
             >
-              HTB
+              HtB
             </Typography>
           </Box>
 
