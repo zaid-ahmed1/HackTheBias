@@ -56,6 +56,6 @@ async def preregister(data: PreregisterRequest):
         raise HTTPException(status_code=500, detail="Failed to send confirmation email")
 
     return {
-        "message": "Successfully added to mailing list",
+        "message": "Successfully Pre-Registered — Please check your email (and spam folder) for a confirmation message.",
         "status": "success"
     }
