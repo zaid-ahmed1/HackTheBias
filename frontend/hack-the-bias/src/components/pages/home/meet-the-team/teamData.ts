@@ -56,7 +56,7 @@ const teamMembers: TeamMember[] = [
   },
   {
     name: 'Joy Wang',
-    program: 'Computer Science',
+    program: 'Geomatics Engineering',
     year: '3rd Year',
     school: 'University of Calgary',
     position: 'Logistics Coordinator',
