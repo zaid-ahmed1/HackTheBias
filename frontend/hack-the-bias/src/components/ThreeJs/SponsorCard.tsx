@@ -122,7 +122,7 @@ function FloatingGrid({ sponsors }: { sponsors: Sponsor[] }) {
 
       {sponsors.map((sponsor, index) => (
         <FloatingLogo
-          key={sponsor.name}
+          key={`${sponsor.name ?? sponsor.logo}-${index}`}
           sponsor={sponsor}
           position={positions[index]}
           index={index}
@@ -143,9 +143,9 @@ function FallbackSponsors({ sponsors }: { sponsors: Sponsor[] }) {
         padding: '20px',
       }}
     >
-      {sponsors.map((sponsor) => (
+      {sponsors.map((sponsor, index) => (
         <div
-          key={sponsor.name}
+          key={`${sponsor.name ?? sponsor.logo}-${index}`}
           style={{
             background: 'white',
             padding: '20px',
