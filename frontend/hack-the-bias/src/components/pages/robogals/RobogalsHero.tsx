@@ -1,5 +1,4 @@
-import { Box, Typography, Button } from '@mui/material';
-import { Launch } from '@mui/icons-material';
+import { Box, Typography } from '@mui/material';
 import GradientText from '@/components/ui/GradientText';
 
 export default function RobogalsHero() {
