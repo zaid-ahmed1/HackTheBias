@@ -39,7 +39,7 @@ export default function RobogalsHero() {
         Mission: Inspire, Empower and Engage!
       </Typography>
 
-      <Button
+      {/* <Button
         variant="contained"
         size="large"
         endIcon={<Launch />}
@@ -62,7 +62,7 @@ export default function RobogalsHero() {
         }}
       >
         Visit Robogals Website
-      </Button>
+      </Button> */}
     </Box>
   );
 }
