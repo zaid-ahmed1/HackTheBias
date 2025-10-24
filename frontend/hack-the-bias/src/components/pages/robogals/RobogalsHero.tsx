@@ -1,5 +1,4 @@
-import { Box, Typography, Button } from '@mui/material';
-import { Launch } from '@mui/icons-material';
+import { Box, Typography } from '@mui/material';
 import GradientText from '@/components/ui/GradientText';
 
 export default function RobogalsHero() {
@@ -39,7 +38,7 @@ export default function RobogalsHero() {
         Mission: Inspire, Empower and Engage!
       </Typography>
 
-      <Button
+      {/* <Button
         variant="contained"
         size="large"
         endIcon={<Launch />}
@@ -62,7 +61,7 @@ export default function RobogalsHero() {
         }}
       >
         Visit Robogals Website
-      </Button>
+      </Button> */}
     </Box>
   );
 }

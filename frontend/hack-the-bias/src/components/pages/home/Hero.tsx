@@ -1,11 +1,9 @@
 'use client';
 
 import GradientText from '@/components/ui/GradientText';
-import { Box, Button, Typography } from '@mui/material';
-import { useRouter } from 'next/navigation';
+import { Box, Typography } from '@mui/material';
 
 export default function Hero() {
-  const router = useRouter();
 
   return (
     <Box
@@ -43,27 +41,6 @@ export default function Hero() {
         equity.
       </Typography>
 
-      <Button
-        variant="contained"
-        size="large"
-        sx={{
-          px: 5,
-          borderRadius: '999px',
-          fontWeight: 600,
-          background: '#153166',
-          color: '#fff',
-          boxShadow: '0 0 10px rgba(0,0,0,0.2)',
-          transition: '0.3s ease',
-          '&:hover': {
-            background: '#1c417f',
-            transform: 'translateY(-2px)',
-            boxShadow: '0 8px 20px rgba(0,0,0,0.2)',
-          },
-        }}
-        onClick={() => router.push('https://robogalsucalgary.com/')}
-      >
-        Learn More About Robogals
-      </Button>
     </Box>
   );
 }

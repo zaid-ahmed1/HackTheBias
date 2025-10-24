@@ -1,6 +1,6 @@
-import { Box, Typography, Divider, Button } from '@mui/material';
-import { Launch } from '@mui/icons-material';
+import { Box, Typography, Divider } from '@mui/material';
 import GradientText from '@/components/ui/GradientText';
+import PreRegisterButton from '@/components/ui/PreRegisterButton';
 
 export default function HackTheBiasSection() {
   return (
@@ -60,7 +60,7 @@ export default function HackTheBiasSection() {
       >
         Approaching the second annual Hack the Bias competition in January 2026,
         the team is ambitiously planning on piloting Calgary&apos;s first
-        36-hour hackathon, an additional 24 hours from last year&apos;s event.
+        36-hour hackathon, an additional 12 hours from last year&apos;s event.
         For this unique experience, an additional tier has also been added,
         extending the invite from high school and first year undergraduate
         students (Tier 2) to now second year and higher undergraduates as well
@@ -81,13 +81,9 @@ export default function HackTheBiasSection() {
         solutions for inclusion, equity, and change!
       </Typography>
 
-      <Button
+      <PreRegisterButton
         variant="contained"
         size="large"
-        endIcon={<Launch />}
-        href="https://robogalsucalgary.com/"
-        target="_blank"
-        rel="noopener noreferrer"
         sx={{
           px: 5,
           borderRadius: '999px',
@@ -103,8 +99,8 @@ export default function HackTheBiasSection() {
           },
         }}
       >
-        Learn More About Robogals
-      </Button>
+        Pre-Register Now
+      </PreRegisterButton>
     </Box>
   );
 }
